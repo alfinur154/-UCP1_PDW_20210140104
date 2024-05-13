@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otomotif World</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Minimal CSS */
+    body {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Dunia Otomotif</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#motorcycles">Sepeda Motor</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-4">Tentang Otomotif </h2>
+        <p>Otomotif adalah tempat untuk mengeksplorasi dunia sepeda motor. Kami menyediakan informasi terbaru tentang tren dan inovasi di industri otomotif.</p>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">Waktu Saat Ini</h2>
+        <p id="currentTime"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="accordion" class="mt-5">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Cruiser Motorcycle
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <img src="assets/OIP.jpeg" class="img-fluid mb-3" alt="Cruiser Motorcycle">
+          <p>Sepeda motor Cruiser dikenal dengan posisi berkendara yang santai, tinggi tempat duduk yang rendah, dan desain stylish. Mereka sering dilengkapi dengan mesin besar dan ideal untuk cruising jarak jauh.</p>
+          <ul>
+            <li>Tipe Mesin: V-twin</li>
+            <li>Kapasitas Mesin: 1800cc</li>
+            <li>Daya Kuda: 70hp</li>
+            <li>Kecepatan Maksimal: 110mph</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Sport Bike
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <img src="assets/R.jpeg" class="img-fluid mb-3" alt="Sport Bike">
+          <p>Sepeda motor Sport dirancang untuk kecepatan, akselerasi, pengereman, dan menikung di jalan beraspal. Mereka biasanya memiliki pegangan kaki tinggi yang menempatkan kaki lebih dekat ke tubuh dan posisi berkendara yang lebih agresif.</p>
+          <ul>
+            <li>Tipe Mesin: Inline-four</li>
+            <li>Kapasitas Mesin: 1000cc</li>
+            <li>Daya Kuda: 200hp</li>
+            <li>Kecepatan Maksimal: 186mph</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2024 seputar dunia otomotif</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    setInterval(function() {
+      var currentDateTime = new Date().toLocaleString();
+      document.getElementById('currentTime').innerHTML = currentDateTime;
+    }, 1000);
+  </script>
+</body>
+</html>
